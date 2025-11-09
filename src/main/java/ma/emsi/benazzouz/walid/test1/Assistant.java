@@ -1,9 +1,9 @@
-package ma.emsi.benazzouz.walid;
+package ma.emsi.benazzouz.walid.test1;
 
-import dev.langchain4j.service.UserMessage;
+import dev.langchain4j.service.SystemMessage;
 
-@FunctionalInterface
 public interface Assistant {
 
-    String chat(@UserMessage String userMessage);
+    @SystemMessage("Tu es un assistant RAG. Tu dois répondre uniquement à partir du PDF. " )
+    String chat(String userMessage);
 }
